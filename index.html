@@ -1,0 +1,870 @@
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+<meta>
+<title>
+  
+</title>
+<style>
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 98%;
+  position: relative;
+  margin-left: 12px;
+ 
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s linear;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,0.6);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: rgb(206, 198, 24);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(165, 149, 43);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 1}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 1}
+  to {opacity: 1}
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {background-image: url("https://cdn.pixabay.com/photo/2016/10/31/19/04/balloons-1786430_1280.jpg"); background-attachment:fixed; background-size:cover;
+  padding: 10px}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); color:white
+}
+
+.header h1 {
+  font-size: 100px; color: rgb(70, 133, 184); font-family: 'Amatic SC', bold}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.3); border:solid; border-color: rgba(255, 255, 255, 0.3); border-bottom:transparent; border-right:transparent; border-left:transparent
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+font-family: 'Amatic SC', bold;
+font-size: 35px;
+padding-left: 10%;
+padding-right: 4%}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgba(255, 255, 255, 0.3));
+  color: rgb(70, 133, 184)
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+font-family: 'Amatic SC', bold}
+
+
+
+/* Fake image */
+.fakeimg {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: rgba(255, 255, 255, 0.3) ;
+  padding: 20px;
+  margin-top: 20px;
+  color:rgb(70, 133, 184)
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+font-family: 'Amatic SC', bold}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+#heart {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    animation: heartbeat 1s infinite;
+    margin:0 auto; 
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: rgb(221, 133, 164);
+    -moz-border-radius: 30px 30px 0 0;
+    border-radius: 30px 30px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+.container {
+              width: 100%;
+          height: 100%}
+        .confetti {
+          width: 10px;
+          height: 10px;
+          background-color: #f2d74e;
+          position: absolute;
+          left: 50%;
+          animation: confetti 5s ease-in-out -5s infinite;
+          transform-origin: center top;
+        }
+        .confetti:nth-child(1) {
+          background-color: #f2d74e; left: 50%; animation-delay: 0;
+        }
+        .confetti:nth-child(2) {
+          background-color: #95c3de; left: 20%; animation-delay: -5s;
+        }
+        .confetti:nth-child(3) {
+          background-color: #ff9a91; left: 30%; animation-delay: -3s;
+        }
+        .confetti:nth-child(4) {
+          background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+        }
+        .confetti:nth-child(5) {
+          background-color: #95c3de; left: 50%; animation-delay: -4s;
+        }
+        .confetti:nth-child(6) {
+          background-color: #ff9a91; left: 60%; animation-delay: -6s;
+        }
+        .confetti:nth-child(7) {
+          background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+        }
+        .confetti:nth-child(8) {
+          background-color: #95c3de; left: 80%; animation-delay: -2s;
+        }
+        .confetti:nth-child(9) {
+          background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+        }
+        .confetti:nth-child(10) {
+          background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+        }
+
+        @keyframes confetti {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+        }
+
+
+.container1 {
+              width: 100%;
+          height: 100%}
+        .confetti1 {
+          width: 15px;
+          height: 15px;
+          background-color: #f2d74e;
+          position: absolute;
+          left: 50%;
+          animation: confetti 5.2s ease-in-out -5s infinite;
+          transform-origin: left top;
+        }
+        .confetti1:nth-child(1) {
+          background-color: #f2d74e; left: 40%; animation-delay: 0;
+        }
+        .confetti1:nth-child(2) {
+          background-color: #95c3de; left: 20%; animation-delay: -5s;
+        }
+        .confetti1:nth-child(3) {
+          background-color: #ff9a91; left: 30%; animation-delay: -3s;
+        }
+        .confetti1:nth-child(4) {
+          background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+        }
+        .confetti1:nth-child(5) {
+          background-color: #95c3de; left: 50%; animation-delay: -4s;
+        }
+        .confetti1:nth-child(6) {
+          background-color: #ff9a91; left: 60%; animation-delay: -6s;
+        }
+        .confetti1:nth-child(7) {
+          background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+        }
+        .confetti1:nth-child(8) {
+          background-color: #95c3de; left: 80%; animation-delay: -2s;
+        }
+        .confetti1:nth-child(9) {
+          background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+        }
+        .confetti1:nth-child(10) {
+          background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+        }
+
+        @keyframes confetti1 {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+        }
+        
+        
+
+.container2 {
+              width: 100%;
+          height: 100%}
+        .confetti2 {
+          width: 10px;
+          height: 10px;
+          background-color: #f2d74e;
+          position: absolute;
+          left: 50%;
+          animation: confetti 5.3s ease-in-out -5s infinite;
+          transform-origin: left top;
+        }
+        .confetti2:nth-child(1) {
+          background-color: #f2d74e; left: 60%; animation-delay: 0;
+        }
+        .confetti2:nth-child(2) {
+          background-color: #95c3de; left: 20%; animation-delay: -5s;
+        }
+        .confetti2:nth-child(3) {
+          background-color: #ff9a91; left: 30%; animation-delay: -3s;
+        }
+        .confetti2:nth-child(4) {
+          background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+        }
+        .confetti2:nth-child(5) {
+          background-color: #95c3de; left: 50%; animation-delay: -4s;
+        }
+        .confetti2:nth-child(6) {
+          background-color: #ff9a91; left: 60%; animation-delay: -6s;
+        }
+        .confetti2:nth-child(7) {
+          background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+        }
+        .confetti2:nth-child(8) {
+          background-color: #95c3de; left: 80%; animation-delay: -2s;
+        }
+        .confetti2:nth-child(9) {
+          background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+        }
+        .confetti2:nth-child(10) {
+          background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+        }
+
+        @keyframes confetti2 {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+        }
+        
+        
+        .container3 {
+              width: 100%;
+          height: 100%}
+        .confetti3 {
+          width: 15px;
+          height: 15px;
+          background-color: #f2d74e;
+          position: absolute;
+          left: 50%;
+          animation: confetti 5.1s ease-in-out -5s infinite;
+          transform-origin: left top;
+        }
+        .confetti3:nth-child(1) {
+          background-color: #f2d74e; left: 70%; animation-delay: 0;
+        }
+        .confetti3:nth-child(2) {
+          background-color: #95c3de; left: 20%; animation-delay: -5s;
+        }
+        .confetti3:nth-child(3) {
+          background-color: #ff9a91; left: 30%; animation-delay: -3s;
+        }
+        .confetti3:nth-child(4) {
+          background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+        }
+        .confetti3:nth-child(5) {
+          background-color: #95c3de; left: 50%; animation-delay: -4s;
+        }
+        .confetti3:nth-child(6) {
+          background-color: #ff9a91; left: 60%; animation-delay: -6s;
+        }
+        .confetti3:nth-child(7) {
+          background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+        }
+        .confetti3:nth-child(8) {
+          background-color: #95c3de; left: 80%; animation-delay: -2s;
+        }
+        .confetti3:nth-child(9) {
+          background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+        }
+        .confetti3:nth-child(10) {
+          background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+        }
+
+        @keyframes confetti3 {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+        }
+        
+        
+        .container4 {
+              width: 100%;
+          height: 100%}
+        .confetti4 {
+          width: 10px;
+          height: 10px;
+          background-color: #f2d74e;
+          position: absolute;
+          left: 50%;
+          animation: confetti 4.9s ease-in-out -5s infinite;
+          transform-origin: left top;
+        }
+        .confetti4:nth-child(1) {
+          background-color: #f2d74e; left: 30%; animation-delay: 0;
+        }
+        .confetti4:nth-child(2) {
+          background-color: #95c3de; left: 20%; animation-delay: -5s;
+        }
+        .confetti4:nth-child(3) {
+          background-color: #ff9a91; left: 30%; animation-delay: -3s;
+        }
+        .confetti4:nth-child(4) {
+          background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+        }
+        .confetti4:nth-child(5) {
+          background-color: #95c3de; left: 50%; animation-delay: -4s;
+        }
+        .confetti4:nth-child(6) {
+          background-color: #ff9a91; left: 60%; animation-delay: -6s;
+        }
+        .confetti4:nth-child(7) {
+          background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+        }
+        .confetti4:nth-child(8) {
+          background-color: #95c3de; left: 80%; animation-delay: -2s;
+        }
+        .confetti4:nth-child(9) {
+          background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+        }
+        .confetti4:nth-child(10) {
+          background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+        }
+
+        @keyframes confetti4 {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="confetti">
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+<div class="confetti">
+</div>
+
+</div>
+</div>
+
+
+<div class="container1">
+<div class="confetti1">
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+<div class="confetti1">
+</div>
+
+</div>
+</div>
+
+
+
+<div class="container2">
+<div class="confetti2">
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+<div class="confetti2">
+</div>
+
+</div>
+</div>
+
+
+
+<div class="container3">
+
+<div class="confetti3">
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+<div class="confetti3">
+</div>
+
+</div>
+</div>
+
+
+<div class="container4">
+
+<div class="confetti4">
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+<div class="confetti4">
+</div>
+
+</div>
+</div>
+
+<div class="header">
+  <h1>Alles Liebe zum Geburtstag, Häschen!</h1>
+ 
+</div>
+
+<div class="topnav">
+  <a href="#">Geschenkschatzkarte</a>
+  <a href="#">Geburtstagskuchen</a>
+  <a href="#">Slideshow</a>
+  <a href="#" style="float:right"><div id="heart"></div></a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Deine Geschenkschatzkarte</h2>
+      <br>
+      
+      <!--<div class="fakeimg" style="height:200px;">Image</div>-->
+      
+      
+      <div id="googleMap" style="width:100%;height:600px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(52.500928,13.489698),
+  zoom:20,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+var marker = new google.maps.Marker({position: myCenter});
+
+marker.setMap(map)
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<br>
+      <h3>
+      <p>Begib dich zu dem auf der Karte eingezeichneten Ort und suche dort nach weiteren Hinweisen auf das Versteck deines Geschenks!</p></h3>
+    </div>
+    <div class="card">
+      <h2>Dein Geburtstagskuchen</h2>
+      <br>
+      <!--<div class="fakeimg" style="height:200px;"></div>-->
+      <img src="https://cdn.pixabay.com/photo/2017/10/30/10/07/birthday-2901945_1280.jpg" alt="Birthday Cake" style="height:600px">
+      <br>
+      <h3>
+      <p>Mjam mjam mjam...</p>
+      <p>Nachdem du dein Geschenk gefunden hast, wird jetzt erstmal schön gefuttert! Kommen Sie, liebstes Häschen, und probieren Sie ein Stück von ihrem fantastischen Geburtstagskuchen!</p></h3>
+    </div>
+  </div>
+  
+  
+
+
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+      <h2>Slideshow: Struppis Abenteuer</h2>
+      <br>
+     
+     <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+   
+    <img src="https://drive.google.com/uc?id=13AGzCpCecCqDKotF1xMQT5t8LSLhF42p" style="width:100%">
+   </div>
+
+  <div class="mySlides fade">
+    
+    <img src="https://drive.google.com/uc?id=1iFYCRbBoXO21RhTfYyIQVRla5n5HpyGy" style="width:100%">
+  </div>
+
+
+  <div class="mySlides fade">
+   
+    <img src="https://drive.google.com/uc?id=1wV5xLKjaNCwxjtAshVtngHqkKZTTBimE" style="width:100%">
+  </div>
+  
+  
+    <div class="mySlides fade">
+   
+    <img src="https://drive.google.com/uc?id=1CG3CPRoCCR2IqgIVzFro3VZBhaV10zd0" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+     
+     
+     
+     
+      <br>
+      <h3>
+      <p>Liebes Häschen,</p>
+      <p>ich liebe dich und du bist mein allergrößter Schatz! Dein Geburtstag ist ein ganz besonderer Tag, denn wenn es dich nicht gäbe, wäre die Welt für einige Menschen (und Stinkmöpse) sehr viel weniger fröhlich, bunt, anstrengend, aufregend und kuschelig. In dieser Slideshow werden, so wie es an besonderen Festtagen Tradition ist, einige Highlights deiner bisherigen Abenteuer stolz präsentiert.</p></h3>
+    </div>
+  </div>
+  </div>
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+
+</html>
